@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grocery Map — Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #34A853;
+      --green-dark: #1E7A38;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #e0e0e0;
+      --bg: #f9f9f7;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background: var(--green);
+      border-radius: 16px;
+      margin-bottom: 12px;
+    }
+
+    .icon-wrap svg {
+      width: 40px;
+      height: 40px;
+      fill: white;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--green-dark);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green);
+    }
+
+    .faq-item { margin-bottom: 24px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .faq-item p, .faq-item li { color: var(--muted); font-size: 0.95rem; }
+    .faq-item ul { padding-left: 20px; margin-top: 6px; }
+    .faq-item li { margin-bottom: 4px; }
+
+    .contact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-card p { color: var(--muted); margin-bottom: 8px; font-size: 0.95rem; }
+
+    .contact-email {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 18px !important;
+      font-size: 1rem !important;
+      word-break: break-all;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      transition: background 0.15s ease;
+    }
+
+    .btn-primary { background: var(--green); color: white; }
+    .btn-primary:hover { background: var(--green-dark); }
+
+    .btn-secondary {
+      background: white;
+      color: var(--green-dark);
+      border: 1.5px solid var(--green);
+    }
+    .btn-secondary:hover { background: #f0f7f1; }
+    .btn-secondary.copied { background: var(--green); color: white; border-color: var(--green); }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--green-dark); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="icon-wrap">
+    <img src="grocery_matt.png" alt="Grocery Map icon" style="width: 72px; height: 72px; border-radius: 16px;" />
+  </div>
+  <h1>Grocery Map</h1>
+  <p>Smart Shopping, Every Trip</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>How do I add a custom store?</h3>
+      <p>Go to the Stores tab and tap the <strong>+</strong> button. You can name the store, choose a layout style, and add aisles with your own section names. Grocery Map Pro allows unlimited custom stores; the free tier includes one.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>My items aren't showing in the right aisle — how do I fix this?</h3>
+      <p>Tap any item in your list to edit it and assign it to the correct aisle for that store. Grocery Map remembers each item's aisle on a per-store basis, so it learns your layout over time.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How does the smart route work?</h3>
+      <p>Grocery Map sorts your list by aisle order so you move through the store efficiently without backtracking. Grocery Map Pro adds advanced strategies like putting cold and frozen items last, ending at the registers, and more.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I import items from a photo or recipe?</h3>
+      <p>Tap <strong>Import</strong> on the list screen and choose one of the import sources (photo, clipboard, Reminders, or file). The photo import reads the text from your image and suggests items to add. Import is a Grocery Map Pro feature.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does Grocery Map Pro include?</h3>
+      <ul>
+        <li>Unlimited custom stores</li>
+        <li>Unlimited Quick Meals</li>
+        <li>Full shopping history &amp; analytics</li>
+        <li>Auto-Add Staples from past trips</li>
+        <li>All import sources (photo, clipboard, Reminders, file)</li>
+        <li>Map image &amp; PDF export</li>
+        <li>Advanced route strategies</li>
+        <li>Premium accent colors &amp; alternate app icons</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I cancel my Pro subscription?</h3>
+      <p>Open the <strong>Settings</strong> app on your iPhone → tap your Apple ID at the top → <strong>Subscriptions</strong> → tap <strong>Grocery Map</strong> → <strong>Cancel Subscription</strong>. You keep Pro access until the end of the current billing period.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is my data backed up?</h3>
+      <p>Your shopping lists, store layouts, and history are stored locally on your device and backed up via iCloud if iCloud Backup is enabled in Settings. Community store layouts shared through the app are stored in iCloud CloudKit.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How does the Grocery Map Pro subscription bill?</h3>
+      <p>Grocery Map Pro is an auto-renewing subscription offered monthly or annually. Payment is charged to your Apple Account at confirmation of purchase. The subscription automatically renews unless it is canceled at least 24 hours before the end of the current period, and your account is charged for renewal within 24 hours before the period ends. You can manage or cancel your subscription anytime in your Apple Account settings. See the <a href="terms.html">Terms of Use</a> for full details.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you offer refunds?</h3>
+      <p>All purchases are processed by Apple, and refund requests are handled by Apple under their standard policies. To request a refund, visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. The Grocery Map team cannot issue refunds directly.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I report inappropriate content in the Community?</h3>
+      <p>Tap the <strong>•••</strong> menu on any shared store layout and choose <strong>Report</strong>. You can flag content as spam, inappropriate, or inaccurate. Layouts that receive multiple reports are automatically hidden, and submitted names and layouts are screened for objectionable content before they ever appear. We have zero tolerance for objectionable content or abusive users.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Support</h2>
+    <div class="contact-card">
+      <p>Can't find the answer above? Send us an email and we'll get back to you as soon as possible.</p>
+      <p class="contact-email" id="support-email">grocerymap.feedback@gmail.com</p>
+      <div class="contact-buttons">
+        <a class="btn btn-primary" href="mailto:grocerymap.feedback@gmail.com">Email Support</a>
+        <button class="btn btn-secondary" id="copy-btn" type="button" onclick="copyEmail()">Copy Address</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Grocery Map &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Use</a></p>
+</footer>
+
+<script>
+  function copyEmail() {
+    var email = "grocerymap.feedback@gmail.com";
+    var btn = document.getElementById("copy-btn");
+    var done = function () {
+      var original = "Copy Address";
+      btn.textContent = "Copied!";
+      btn.classList.add("copied");
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.classList.remove("copied");
+      }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(done, function () { fallbackCopy(email, done); });
+    } else {
+      fallbackCopy(email, done);
+    }
+  }
+
+  function fallbackCopy(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "absolute";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    done();
+  }
+</script>
+
+</body>
+</html>
