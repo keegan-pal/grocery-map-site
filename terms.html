@@ -16,15 +16,27 @@
       --bg: #f9f9f7;
     }
 
+    @keyframes gradshift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(135deg, #eaf7f1 0%, #d3efe4 12%, #bfe3ec 26%, #cfe0f4 38%, #ded9f5 52%, #ecd7ee 63%, #f7dcd6 73%, #fbe4cf 82%, #e2efd9 92%, #d4f0e2 100%);
+      background-size: 300% 300%;
+      animation: gradshift 14s ease infinite;
+      min-height: 100vh;
       color: var(--text);
       line-height: 1.7;
     }
 
     header {
-      background: white;
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 20px;
       text-align: center;
@@ -87,7 +99,10 @@
     li { margin-bottom: 6px; }
 
     .highlight {
-      background: white;
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
       border: 1px solid var(--border);
       border-left: 4px solid var(--green);
       border-radius: 8px;
@@ -110,7 +125,7 @@
       padding: 32px 20px;
       color: var(--muted);
       font-size: 0.85rem;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(0,0,0,0.08);
     }
   </style>
 </head>
