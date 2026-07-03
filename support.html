@@ -17,18 +17,27 @@
       --bg: #f9f9f7;
     }
 
+    @keyframes gradshift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
       color: var(--text);
       line-height: 1.65;
+      background: linear-gradient(135deg, #f2fbf7, #eef4fd, #f5f1fc, #fdf3ee, #f2fbf7, #edf9f4);
+      background-size: 300% 300%;
+      animation: gradshift 20s ease infinite;
+      min-height: 100vh;
     }
 
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.88);
       backdrop-filter: saturate(180%) blur(20px);
       -webkit-backdrop-filter: saturate(180%) blur(20px);
       border-bottom: 1px solid var(--border);
@@ -63,7 +72,7 @@
       white-space: nowrap;
     }
 
-    .nav-tab:hover { background: #f0f0f0; color: var(--text); }
+    .nav-tab:hover { background: rgba(0,0,0,0.06); color: var(--text); }
     .nav-tab.active { background: var(--green-light); color: var(--green-dark); font-weight: 600; }
 
     .nav-download {
@@ -79,12 +88,6 @@
     }
 
     .nav-download:hover { background: var(--green-dark); }
-
-    @media (max-width: 480px) {
-      nav { padding: 0 16px; }
-      .nav-name { display: none; }
-      .nav-download { display: none; }
-    }
 
     main {
       max-width: 680px;
@@ -113,7 +116,9 @@
     .faq-item a { color: var(--green-dark); }
 
     .contact-card {
-      background: white;
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 24px;
@@ -168,25 +173,31 @@
       padding: 32px 20px;
       color: var(--muted);
       font-size: 0.85rem;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(0,0,0,0.08);
     }
 
     footer a { color: var(--green-dark); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      nav { padding: 0 16px; }
+      .nav-name { display: none; }
+      .nav-download { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="index.html">
+  <a class="nav-brand" href="marketing.html">
     <img class="nav-icon" src="grocery_matt.png" alt="Grocery Map" />
     <span class="nav-name">Grocery Map</span>
   </a>
   <div class="nav-tabs">
-    <a href="index.html" class="nav-tab">Home</a>
-    <a href="faq.html" class="nav-tab active">Support</a>
+    <a href="marketing.html" class="nav-tab">Home</a>
+    <a href="support.html" class="nav-tab active">Support</a>
   </div>
-  <a href="index.html#download" class="nav-download">Download</a>
+  <a href="marketing.html#download" class="nav-download">Download</a>
 </nav>
 
 <main>
@@ -289,7 +300,7 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 Grocery Map &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Use</a></p>
+  <p>&copy; 2026 Grocery Map &nbsp;&middot;&nbsp; <a href="marketing.html">Home</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Use</a></p>
 </footer>
 
 <script>
