@@ -68,33 +68,35 @@
       color: var(--text);
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+    .nav-tabs { display: flex; gap: 4px; }
 
-    .nav-links a {
+    .nav-tab {
       text-decoration: none;
-      color: var(--muted);
-      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.875rem;
       font-weight: 500;
-      transition: color 0.15s;
+      color: var(--muted);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
     }
 
-    .nav-links a:hover { color: var(--green-dark); }
+    .nav-tab:hover { background: #f0f0f0; color: var(--text); }
+    .nav-tab.active { background: var(--green-light); color: var(--green-dark); font-weight: 600; }
 
     .nav-download {
-      background: var(--green) !important;
-      color: white !important;
-      padding: 8px 18px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      padding: 7px 16px;
       border-radius: 20px;
-      font-size: 0.875rem !important;
-      font-weight: 600 !important;
-      transition: background 0.15s !important;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: background 0.15s;
+      flex-shrink: 0;
     }
 
-    .nav-download:hover { background: var(--green-dark) !important; color: white !important; }
+    .nav-download:hover { background: var(--green-dark); }
 
     /* ── HERO ── */
     .hero {
@@ -490,8 +492,9 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      nav { padding: 12px 16px; }
-      .nav-links a:not(.nav-download) { display: none; }
+      nav { padding: 0 16px; }
+      .nav-name { display: none; }
+      .nav-download { display: none; }
       .hero { padding: 64px 20px 80px; min-height: 520px; }
       .features { padding: 64px 20px; }
       .feature-grid { gap: 28px 20px; }
@@ -506,15 +509,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-brand" href="marketing.html">
+  <a class="nav-brand" href="index.html">
     <img class="nav-icon" src="grocery_matt.png" alt="Grocery Map" />
     <span class="nav-name">Grocery Map</span>
   </a>
-  <div class="nav-links">
-    <a href="index.html">Support</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="#download" class="nav-download">Download</a>
+  <div class="nav-tabs">
+    <a href="index.html" class="nav-tab active">Home</a>
+    <a href="faq.html" class="nav-tab">Support</a>
   </div>
+  <a href="#download" class="nav-download">Download</a>
 </nav>
 
 <!-- HERO -->
@@ -704,7 +707,7 @@
     <span>Grocery Map</span>
   </div>
   <div class="footer-links">
-    <a href="index.html">Support &amp; FAQ</a>
+    <a href="faq.html">Support &amp; FAQ</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Use</a>
     <a href="mailto:grocerymap.feedback@gmail.com">Contact</a>
