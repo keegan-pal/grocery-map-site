@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grocery Map — Privacy Policy</title>
+  <meta name="theme-color" content="#1E7A38" />
+  <link rel="icon" type="image/png" href="grocery_matt.png" />
+  <link rel="apple-touch-icon" href="grocery_matt.png" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -19,6 +22,10 @@
       0%   { background-position: 0% 50%; }
       50%  { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; }
     }
 
     body {
@@ -148,10 +155,10 @@
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="effective">Effective date: July 3, 2026 &nbsp;·&nbsp; Last updated: July 3, 2026</p>
+  <p class="effective">Effective date: July 3, 2026 &nbsp;·&nbsp; Last updated: July 4, 2026</p>
 
   <div class="intro">
-    Grocery Map is built to keep your data on your device. There are no ads, no third-party analytics, and no trackers. Your shopping lists, store layouts, and history stay on your iPhone and in your own private iCloud. The only information that leaves your device is what you choose to publish to the Community, and the upvotes or reports you submit.
+    Grocery Map is built to keep your data on your device. There are no ads, no third-party analytics, and no trackers. Your shopping lists, store layouts, and history stay on your iPhone and in your own private iCloud. The main information that leaves your device is what you choose to publish to the Community, and the upvotes or reports you submit. A few optional features also rely on Apple services to work — for example, dictation sends audio to Apple for transcription and finding nearby stores queries Apple Maps — but that data goes to Apple, never to Grocery Map. Details are in Section 5.
   </div>
 
   <section>
@@ -186,12 +193,20 @@
 
   <section>
     <h2>4. Sign in with Apple</h2>
-    <p>If you sign in to the Community with Sign in with Apple, Apple provides a private, app-specific identifier and — only if you agree at the prompt — your name and an optional private-relay email. These are used only to attribute your Community posts to you and let you manage them. Apple only shares your name on the first sign-in; if it is missing later, the app may ask permission to read the name on your iCloud account so your posts stay attributed to you. You can also use the Community as a guest with a display name of your choice.</p>
+    <p>If you sign in to the Community with Sign in with Apple, Apple provides a private, app-specific identifier and — only if you agree at the prompt — your name and, optionally, a private-relay email. Your name (or a display name you choose) is what attributes your Community posts to you and lets you manage them. If you share a relay email, it is stored only with your sign-in on your device; it is not published to the Community, is not attached to your posts, and is not sent to Grocery Map. Apple only shares your name on the first sign-in; if it is missing later, the app may ask permission to read the name on your iCloud account so your posts stay attributed to you. You can also use the Community as a guest with a display name of your choice.</p>
   </section>
 
   <section>
     <h2>5. Device permissions</h2>
-    <p>Grocery Map may ask for access to Apple Reminders (to import or export list items) and Photos (to read a photo for on-device text recognition, or to save a map image). These are used only when you start the action, are processed on your device, and are never sent to Grocery Map. You can change either permission any time in Settings → Privacy &amp; Security.</p>
+    <p>Grocery Map requests the following permissions. Each is optional, used only when you start the relevant action, and can be changed at any time in <strong>Settings → Privacy &amp; Security</strong>.</p>
+    <ul>
+      <li><strong>Location (When In Use).</strong> Used on the Community tab to find grocery and big-box stores near you. Your location is passed to Apple Maps on-device and is never sent to Grocery Map.</li>
+      <li><strong>Camera.</strong> Used to read a photo you take so grocery items can be imported from it. Images are processed on your device using on-device text recognition and are not uploaded.</li>
+      <li><strong>Microphone &amp; Speech Recognition.</strong> Used to transcribe what you say into your shopping list. Grocery Map uses Apple's speech recognition, so your audio may be sent to Apple to be turned into text; where a device supports on-device recognition, Apple may process it locally. Grocery Map itself never records, stores, or receives your audio, and the transcribed text stays on your device unless you choose to publish it.</li>
+      <li><strong>Photos.</strong> Used in two ways: to read a photo you select from your library so grocery items can be recognized and imported from it, and to save your rendered store map back to your Photos library.</li>
+      <li><strong>Reminders.</strong> Used in three ways: to read your Reminders lists so you can import items into your shopping list; to mark selected reminders as completed when you use the "add and remove from Reminders" import option; and to create a new Reminders list and write your grocery items into it when you export your list to Reminders.</li>
+    </ul>
+    <p>None of these permissions are required to use the core shopping-list features. Denying a permission only disables the specific feature that needs it.</p>
   </section>
 
   <section>
@@ -251,7 +266,7 @@
 
   <section>
     <h2>11. Sensitive personal information</h2>
-    <p>Grocery Map does not collect sensitive personal information — such as government IDs, precise geolocation, financial account details, race, health, or contents of private communications — for the purpose of inferring characteristics about you. An optional relay email from Sign in with Apple is used only to attribute your posts and provide support.</p>
+    <p>Grocery Map does not collect sensitive personal information — such as government IDs, precise geolocation, financial account details, race, health, or contents of private communications — for the purpose of inferring characteristics about you. If you share an optional relay email through Sign in with Apple, it is stored only with your sign-in on your device and is not used to build a profile of you.</p>
   </section>
 
   <section>
@@ -292,6 +307,7 @@
   <section>
     <h2>16. GDPR / UK rights and international users</h2>
     <p>If you are in the EEA, UK, or Switzerland, you have rights to access, correct, delete, restrict, port, and object to processing of your personal data, and to lodge a complaint with your supervisory authority. The legal bases for the limited processing are: your consent (publishing to the Community, Sign in with Apple, device permissions), performance of a contract (providing features you request), and legitimate interests (keeping the Community safe).</p>
+    <p>Where processing is based on your consent, you can withdraw it at any time — for example, by not publishing to the Community, signing out, or turning a permission off in iOS Settings. Withdrawing consent does not affect processing already carried out before the withdrawal.</p>
     <p>Community data lives in Apple's global CloudKit infrastructure and may be processed in the United States and other countries. Apple maintains its own safeguards for those transfers.</p>
   </section>
 

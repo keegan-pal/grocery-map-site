@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grocery Map — Smart Shopping, Every Trip</title>
-  <meta name="description" content="Turn your grocery list into an aisle-by-aisle store map. Grocery Map routes you through any store efficiently — no more backtracking." />
+  <meta name="description" content="Turn your grocery list into an aisle-by-aisle store map. Grocery Map routes you through the store aisle by aisle — with less backtracking." />
+  <meta name="theme-color" content="#1E7A38" />
+  <link rel="icon" type="image/png" href="grocery_matt.png" />
+  <link rel="apple-touch-icon" href="grocery_matt.png" />
+  <link rel="canonical" href="https://keegan-pal.github.io/grocery-map-site/" />
   <meta property="og:title" content="Grocery Map" />
   <meta property="og:description" content="Shop smarter, every trip. Grocery Map turns your grocery list into a step-by-step aisle map." />
-  <meta property="og:image" content="grocery_matt.png" />
+  <meta property="og:image" content="https://keegan-pal.github.io/grocery-map-site/grocery_matt.png" />
+  <meta property="og:url" content="https://keegan-pal.github.io/grocery-map-site/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Grocery Map" />
   <meta name="twitter:description" content="Shop smarter, every trip. Turn your grocery list into an aisle-by-aisle store map." />
+  <meta name="twitter:image" content="https://keegan-pal.github.io/grocery-map-site/grocery_matt.png" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -133,6 +139,10 @@
       0%   { background-position: 0% 50%; }
       50%  { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero { animation: none; }
     }
 
     .hero-inner {
@@ -526,7 +536,7 @@
     <img class="hero-icon" src="grocery_matt.png" alt="Grocery Map icon" />
     <div class="hero-eyebrow">Available on iPhone</div>
     <h1>Shop smarter,<br /><span>every trip.</span></h1>
-    <p class="hero-sub">Grocery Map turns your list into an aisle-by-aisle store map — so you move through any store efficiently, every time.</p>
+    <p class="hero-sub">Grocery Map turns your list into an aisle-by-aisle store map — so you move through the store efficiently, trip after trip.</p>
     <div class="hero-cta" id="download">
       <a class="appstore-btn" href="https://apps.apple.com/app/grocery-map/id6785138144" target="_blank" rel="noopener" aria-label="Download on the App Store">
         <!-- Apple logo -->
@@ -601,7 +611,7 @@
         <svg viewBox="0 0 24 24"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
       </div>
       <h3>Aisle-by-aisle routing</h3>
-      <p>Your list becomes a smart store map — every item in order so you glide through without backtracking.</p>
+      <p>Your list becomes a smart store map — every item in order so you glide through with less backtracking.</p>
     </div>
 
     <div class="feature-card">
@@ -625,7 +635,7 @@
         <svg viewBox="0 0 24 24"><path d="M13 3a9 9 0 00-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.95-2.05L6.7 18.3C8.36 19.97 10.56 21 13 21a9 9 0 000-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
       </div>
       <h3>Full shopping history</h3>
-      <p>Every past trip saved. Reload last week's list or re-map a favorite run in a single tap.</p>
+      <p>Your shopping trips, saved. Reload last week's list or re-map a favorite run in a single tap.</p>
     </div>
 
     <div class="feature-card">
@@ -633,7 +643,7 @@
         <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
       </div>
       <h3>Assign items by aisle</h3>
-      <p>Sort every product into the aisle where you'll find it. Remembered per-store, forever.</p>
+      <p>Sort every product into the aisle where you'll find it. Remembered per store for next time.</p>
     </div>
 
     <div class="feature-card">
