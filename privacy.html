@@ -55,7 +55,7 @@
     header a:hover { text-decoration: underline; }
 
     main {
-      max-width: 680px;
+      max-width: 720px;
       margin: 48px auto;
       padding: 0 20px 64px;
     }
@@ -70,7 +70,7 @@
     .effective {
       color: var(--muted);
       font-size: 0.9rem;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     section { margin-bottom: 40px; }
@@ -86,6 +86,13 @@
       border-bottom: 2px solid var(--green);
     }
 
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
     p { color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
     p:last-child { margin-bottom: 0; }
 
@@ -99,20 +106,62 @@
     li { margin-bottom: 6px; }
 
     .highlight {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: saturate(180%) blur(20px);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-left: 4px solid var(--green);
       border-radius: 8px;
       padding: 16px 20px;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
       font-size: 0.95rem;
       color: var(--muted);
     }
 
     a { color: var(--green-dark); }
+
+    .toc {
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      border: none;
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .toc ol { padding-left: 20px; color: var(--muted); font-size: 0.9rem; }
+    .toc li { margin-bottom: 4px; }
+    .toc a { color: var(--green-dark); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    .table-wrap { overflow-x: auto; margin-bottom: 16px; }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.88rem;
+      background: rgba(255,255,255,0.72);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    th { background: rgba(52,168,83,0.10); color: var(--text); font-weight: 700; }
 
     footer {
       text-align: center;
@@ -131,90 +180,203 @@
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="effective">Effective date: June 27, 2026</p>
+  <p class="effective">Effective date: July 3, 2026 &nbsp;·&nbsp; Last updated: July 3, 2026</p>
 
   <div class="highlight">
-    <strong>The short version:</strong> Grocery Map has no ads, no third-party analytics, and never sells your data. Your shopping lists and store layouts stay on your device and in your personal iCloud account. <strong>The developer receives no data about your lists or how you use the app privately.</strong> The only things that leave your device are the Community actions you choose to take — publishing a layout, upvoting, or reporting — which use Apple's CloudKit and your iCloud identifier, as explained below.
+    <strong>The short version:</strong> Grocery Map has no ads, no third-party analytics, and no trackers. We do <strong>not</strong> sell or share your personal information, and we never have. Your shopping lists, store layouts, and history stay on your device and in your own private iCloud account — the developer cannot see them. The only information that ever leaves your device is what you deliberately publish to the Community (a store layout and a display name you choose), plus the upvotes and reports you submit, which are stored in Apple's CloudKit using an identifier assigned by Apple. Everything below explains this in full and describes your rights, including your rights under California law.
   </div>
 
-  <section>
-    <h2>Who We Are</h2>
-    <p>Grocery Map is developed and operated by the Grocery Map iOS team. If you have questions about this policy, contact us at <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a>.</p>
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#who">Who we are &amp; scope</a></li>
+      <li><a href="#collect">Information we collect (and don't)</a></li>
+      <li><a href="#categories">California categories of personal information</a></li>
+      <li><a href="#use">How we use information</a></li>
+      <li><a href="#sharing">How information is shared</a></li>
+      <li><a href="#sale">No sale or sharing of personal information</a></li>
+      <li><a href="#sensitive">Sensitive personal information</a></li>
+      <li><a href="#retention">Data retention &amp; deletion</a></li>
+      <li><a href="#security">Data security</a></li>
+      <li><a href="#ccpa">Your California privacy rights (CCPA/CPRA)</a></li>
+      <li><a href="#other-us">Other U.S. state privacy rights</a></li>
+      <li><a href="#gdpr">GDPR / UK rights &amp; international users</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#dnt">Do Not Track &amp; opt-out signals</a></li>
+      <li><a href="#thirdparty">Third-party services</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </div>
+
+  <section id="who">
+    <h2>1. Who We Are &amp; Scope</h2>
+    <p>Grocery Map ("<strong>Grocery Map</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") is an iOS application that turns your grocery list into an aisle-by-aisle store map. This Privacy Policy explains how we handle information in connection with the app and its related community features (collectively, the "<strong>Service</strong>"). It applies to all users of the Service.</p>
+    <p>For purposes of the California Consumer Privacy Act, as amended by the California Privacy Rights Act (together, the "<strong>CCPA</strong>"), Grocery Map is the "business" responsible for the limited personal information described here. For users in the EEA/UK, we act as the "controller" of that limited information, except where Apple is the controller of its own iCloud services.</p>
+    <p>This policy does not cover Apple's own collection and use of information. Apple's iCloud, App Store, and Sign in with Apple services are governed by Apple's <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
   </section>
 
-  <section>
-    <h2>Data Stored on Your Device</h2>
-    <p>All of your personal grocery data is stored locally on your iPhone and backed up through Apple's standard iCloud Backup if you have it enabled:</p>
+  <section id="collect">
+    <h2>2. Information We Collect (and Don't)</h2>
+
+    <h3>2.1 Data stored only on your device</h3>
+    <p>The core of Grocery Map works entirely on your device. The following is created and stored locally on your iPhone (and backed up to your own private iCloud account if you have iCloud Backup enabled). <strong>We do not receive, access, or store this information on any server we control:</strong></p>
     <ul>
       <li>Shopping lists and grocery items</li>
       <li>Custom store layouts and aisle configurations</li>
-      <li>Shopping trip history and analytics</li>
-      <li>Quick Meals and staple item preferences</li>
-      <li>App settings and preferences</li>
+      <li>Shopping trip history and personal analytics</li>
+      <li>Quick Meals, staples, and item preferences</li>
+      <li>App settings, appearance, and preferences</li>
     </ul>
-    <p>We do not have access to this data. It never passes through our servers.</p>
-  </section>
 
-  <section>
-    <h2>iCloud CloudKit (Community Features)</h2>
-    <p>When you choose to share a store layout via the Community tab, that layout, along with a display name you choose, is uploaded to Apple's CloudKit public database and becomes visible to other users. This happens only when you take an explicit action to publish it. Your shopping lists, history, and personal data are never shared.</p>
-    <p>Community content is associated with the display name you enter — not your real name, email, or Apple Account, unless you choose to include personal information in those fields (which we ask you not to do). You can delete content you have shared at any time from within the app.</p>
-    <p><strong>Community interactions and your iCloud identifier.</strong> When you publish, upvote, or report a layout, CloudKit stores a small record that includes your Apple iCloud user identifier. This identifier is assigned by Apple — it is not your name or email — and it lets the app ensure each person's vote or report counts only once and lets you manage the layouts you own. As the operator of the CloudKit container, we are able to see this public community data, and we use it only to run and moderate the Community features.</p>
-    <p><strong>Moderation.</strong> To keep the community safe, display names and shared layout names are automatically filtered for objectionable language before publishing, and users can report a layout or block an author. When you report content, a report record (associated with your iCloud identifier) is stored to power automatic hiding of flagged content once it crosses a report threshold. This automatic filter is a first-pass safeguard and may not catch everything, which is why reporting and blocking are also provided. See our <a href="terms.html">Terms of Use</a> for the full community content policy.</p>
-    <p>Apple's iCloud services are governed by Apple's own <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
-  </section>
-
-  <section>
-    <h2>Apple Reminders</h2>
-    <p>Grocery Map can read from and write to Apple Reminders to let you import existing reminder lists as grocery items or export your shopping list as reminders. This access requires your explicit permission and can be revoked at any time in <strong>Settings → Privacy &amp; Security → Reminders</strong>. We only access Reminders when you initiate an import or export action — we never read your Reminders in the background.</p>
-  </section>
-
-  <section>
-    <h2>Photos</h2>
-    <p>Grocery Map may access your photo library in two ways:</p>
+    <h3>2.2 Community content you choose to publish</h3>
+    <p>If — and only if — you use the Community feature, the following is uploaded to Apple's CloudKit public database, where it becomes visible to other users:</p>
     <ul>
-      <li><strong>Import (Pro):</strong> You can pick a photo from your library to extract a grocery list using on-device text recognition. The selected image is processed locally and is not transmitted anywhere.</li>
-      <li><strong>Save to Photos (Pro):</strong> You can save a map image of your shopping list directly to your photo library. This requires add-only access to Photos.</li>
+      <li>The store layout you explicitly choose to publish</li>
+      <li>A display name you choose (we ask you not to use your full legal name or any sensitive detail)</li>
+      <li>The store's public place information (e.g., an Apple Maps place identifier) so the layout can be matched to a real location</li>
+      <li>Upvotes and content reports you submit</li>
     </ul>
-    <p>Photo access can be revoked at any time in <strong>Settings → Privacy &amp; Security → Photos</strong>.</p>
+
+    <h3>2.3 Identifiers used for community integrity</h3>
+    <p>When you publish, upvote, or report, CloudKit stores a record that includes an <strong>iCloud user identifier assigned by Apple</strong>. This identifier is not your name, email, or Apple Account password. It lets the Service ensure each person's vote or report counts once, lets you manage layouts you own, and supports moderation. If you sign in with Sign in with Apple, we also store a stable app-specific identifier and the name you consented to share (see 2.4).</p>
+
+    <h3>2.4 Sign in with Apple (optional)</h3>
+    <p>If you choose to sign in to the Community with Sign in with Apple, Apple provides us with a private, app-specific identifier and — only if you agree at the prompt — your name and/or a private relay email. We use these solely to attribute your community contributions to you and to let you manage them. Apple only provides your name on the first authorization; if it is unavailable, the app may ask your permission to read the name on your iCloud account so your contributions are attributed correctly. You may instead continue as a guest with a display name of your choosing.</p>
+
+    <h3>2.5 Device permissions you can grant or deny</h3>
+    <p>The app can request access to <strong>Apple Reminders</strong> (to import/export list items) and <strong>Photos</strong> (to read a photo for on-device text recognition, or to save a map image). These are used only when you initiate the action, are processed on your device, and are never transmitted to us. You can grant or revoke them anytime in <strong>Settings → Privacy &amp; Security</strong>.</p>
+
+    <h3>2.6 What we do NOT collect</h3>
+    <p>We do not collect: your precise or coarse location for tracking; your contacts; advertising identifiers (IDFA); behavioral or usage analytics; crash telemetry through third-party SDKs; browsing history; biometric data; or payment/financial information (Apple processes all purchases — we never see your card).</p>
   </section>
 
-  <section>
-    <h2>In-App Purchases</h2>
-    <p>Grocery Map Pro is offered as an auto-renewable subscription through Apple's App Store. All payment processing is handled entirely by Apple. We never receive, store, or process your payment information. For billing questions, visit <a href="https://support.apple.com/billing" target="_blank" rel="noopener">support.apple.com/billing</a>.</p>
+  <section id="categories">
+    <h2>3. California Categories of Personal Information</h2>
+    <p>The CCPA sorts personal information into statutory categories. Over the preceding 12 months, the only categories we have "collected" (in the CCPA sense, and only when you use the Community) are:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>CCPA category</th><th>Collected?</th><th>What / source</th><th>Sold or shared?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Identifiers (e.g., Apple-assigned iCloud/user identifier, app-specific ID, chosen display name, optional relay email)</td><td>Yes, only if you use Community / Sign in with Apple</td><td>From you and from Apple, via CloudKit and Sign in with Apple</td><td><strong>No</strong></td></tr>
+          <tr><td>User-generated content (published store layouts, upvotes, reports)</td><td>Yes, only if you publish</td><td>From you</td><td><strong>No</strong></td></tr>
+          <tr><td>Commercial information (subscription status)</td><td>Handled by Apple; we receive only a yes/no entitlement</td><td>From Apple / StoreKit</td><td><strong>No</strong></td></tr>
+          <tr><td>Geolocation data (precise)</td><td>No</td><td>—</td><td>No</td></tr>
+          <tr><td>Biometric, health, financial account, or government ID information</td><td>No</td><td>—</td><td>No</td></tr>
+          <tr><td>Internet/network activity for tracking, inferences, or profiling</td><td>No</td><td>—</td><td>No</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The store place identifier associated with a published layout describes a <em>store</em>, not you. We do not use it to locate or track you.</p>
   </section>
 
-  <section>
-    <h2>Analytics &amp; Advertising</h2>
-    <p>Grocery Map contains no third-party analytics SDKs, no advertising networks, and no tracking pixels. We do not collect crash reports, usage statistics, or behavioral data through any third-party service. We do not sell or share your personal information, and we do not engage in cross-app tracking as defined by Apple's App Tracking Transparency framework.</p>
-    <p>The developer does not operate any custom analytics server, and receives no information about how you use the app privately. The exceptions are the Community actions described above — publishing a layout, upvoting, or reporting — which are stored in Apple's public CloudKit database together with your iCloud identifier, and are accessible to the developer as the container operator solely to run and moderate the Community. Published layouts are visible to everyone, exactly as you intended when you published them.</p>
+  <section id="use">
+    <h2>4. How We Use Information</h2>
+    <p>We use the limited information above only for these business purposes:</p>
+    <ul>
+      <li><strong>To provide the Community feature</strong> — display published layouts, attribute them to their author, and let you manage your own content.</li>
+      <li><strong>To maintain integrity</strong> — ensure votes and reports count once per person.</li>
+      <li><strong>To moderate</strong> — filter submitted text for objectionable content, process reports, hide flagged content, and honor blocks, keeping the community safe.</li>
+      <li><strong>To operate subscriptions</strong> — unlock Pro features based on the entitlement Apple reports to the app.</li>
+      <li><strong>To support you and comply with law</strong> — respond to your requests, enforce our Terms, and meet legal obligations.</li>
+    </ul>
+    <p>We do <strong>not</strong> use your information for advertising, cross-context behavioral advertising, profiling that produces legal or similarly significant effects, or to train third-party advertising models. We do not engage in automated decision-making that produces legal or similarly significant effects about you.</p>
   </section>
 
-  <section>
-    <h2>Data Retention &amp; Deletion</h2>
-    <p>Because your personal grocery data lives on your device, it is retained until you delete it or remove the app. Deleting the app removes the local data from your device (an iCloud Backup, if enabled, follows Apple's retention rules).</p>
-    <p>Community content you publish remains in CloudKit until you delete it from within the app. To remove all of your shared community content, delete each shared layout from the Community tab. If you need help removing content, contact us at <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a>.</p>
+  <section id="sharing">
+    <h2>5. How Information Is Shared</h2>
+    <p>We are not in the business of sharing your information, and we keep it to the minimum necessary to run the Service:</p>
+    <ul>
+      <li><strong>Apple.</strong> Community content and identifiers reside in Apple's CloudKit; subscriptions and Sign in with Apple are handled by Apple. Apple acts as our infrastructure/service provider and, for its own services, as an independent controller under its own policy.</li>
+      <li><strong>Other users.</strong> Content you publish to the Community (a layout and your chosen display name) is intentionally public and visible to other users — that is the purpose of publishing it.</li>
+      <li><strong>Legal &amp; safety.</strong> We may disclose information if required by law, subpoena, or valid legal process, or where necessary to protect the rights, safety, or property of users, the public, or us.</li>
+      <li><strong>Business transfer.</strong> If the app is ever acquired or transferred, public community data may transfer with it, subject to this policy.</li>
+    </ul>
+    <p>We do <strong>not</strong> disclose your personal information to data brokers, advertisers, or analytics companies. We have no such relationships.</p>
   </section>
 
-  <section>
-    <h2>Your Privacy Rights</h2>
-    <p>Depending on where you live, you may have rights under laws such as the EU/UK General Data Protection Regulation (GDPR) or the California Consumer Privacy Act (CCPA), including the right to access, correct, or delete personal information, and the right not to be discriminated against for exercising those rights.</p>
-    <p>Because Grocery Map does not collect or store your personal information on our own servers, most of your data is already under your direct control on your device. For community content stored in iCloud, you can access and delete it within the app at any time. To exercise any privacy right or ask a question, email us at <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a> and we will respond as required by applicable law.</p>
+  <section id="sale">
+    <h2>6. No Sale or Sharing of Personal Information</h2>
+    <p><strong>We do not sell your personal information, and we do not share it for cross-context behavioral advertising</strong>, as those terms are defined under the CCPA. We have not done so in the preceding 12 months. Because we do not sell or share personal information, there is nothing for you to opt out of — but you may still submit a request and we will confirm our practices. We also do not sell or share the personal information of minors under 16.</p>
   </section>
 
-  <section>
-    <h2>Children's Privacy</h2>
-    <p>Grocery Map is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information through the community features, contact us and we will remove it.</p>
+  <section id="sensitive">
+    <h2>7. Sensitive Personal Information</h2>
+    <p>We do not collect or process "sensitive personal information" as defined by the CCPA (such as government IDs, precise geolocation, financial account details, race, health, or contents of your private communications) for the purpose of inferring characteristics about you. An optional email from Sign in with Apple, if you provide one, is used only to attribute and manage your community contributions and for support — never to infer characteristics. Accordingly, the CCPA "Limit the Use of My Sensitive Personal Information" right does not meaningfully apply, but you may still contact us with any request.</p>
   </section>
 
-  <section>
-    <h2>Changes to This Policy</h2>
-    <p>If we make material changes to this policy we will update the effective date at the top. Continued use of the app after changes are posted constitutes acceptance of the updated policy.</p>
+  <section id="retention">
+    <h2>8. Data Retention &amp; Deletion</h2>
+    <p><strong>On-device data</strong> is retained until you delete it or remove the app. Deleting the app removes the local data from your device; any iCloud Backup follows Apple's retention rules under your control.</p>
+    <p><strong>Community content</strong> you publish remains in CloudKit until you delete it in the app or ask us to remove it. You can delete each shared layout from the Community tab at any time. Moderation records (e.g., report and vote records tied to an Apple-assigned identifier) are retained only as long as needed to keep the community functioning and safe, and then deleted or de-associated. We retain information no longer than necessary for the purposes described here or as required by law.</p>
+    <p>To request deletion of community content you can't remove yourself, email <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a>.</p>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Questions or concerns about this privacy policy? Email us at <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a>.</p>
+  <section id="security">
+    <h2>9. Data Security</h2>
+    <p>Your on-device data is protected by iOS's built-in security and, if enabled, your device passcode and encryption. Community data is stored in Apple's CloudKit, which encrypts data in transit and at rest under Apple's security practices. Because we deliberately collect so little and keep nothing on our own servers, the attack surface for your personal information is extremely small. No method of transmission or storage is 100% secure, however, and we cannot guarantee absolute security.</p>
+  </section>
+
+  <section id="ccpa">
+    <h2>10. Your California Privacy Rights (CCPA/CPRA)</h2>
+    <p>If you are a California resident, you have the following rights regarding personal information a business collects about you:</p>
+    <ul>
+      <li><strong>Right to Know / Access.</strong> Request the categories and specific pieces of personal information we have collected, the sources, the business purposes, and the categories of third parties to whom it was disclosed.</li>
+      <li><strong>Right to Delete.</strong> Request deletion of personal information we have collected, subject to legal exceptions.</li>
+      <li><strong>Right to Correct.</strong> Request correction of inaccurate personal information.</li>
+      <li><strong>Right to Opt Out of Sale/Sharing.</strong> We do not sell or share personal information, so there is nothing to opt out of, but you may still ask us to confirm.</li>
+      <li><strong>Right to Limit Use of Sensitive Personal Information.</strong> We do not use sensitive personal information for purposes that trigger this right.</li>
+      <li><strong>Right to Non-Discrimination.</strong> We will never deny you service, charge you a different price, or provide a different quality of service because you exercised a privacy right.</li>
+    </ul>
+    <h3>How to exercise your rights</h3>
+    <p>Submit a request by emailing <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a> with the subject line "California Privacy Request." Because most of your data lives only on your device and under your own control, you can also exercise many of these rights directly in the app (delete data, remove published layouts, revoke permissions).</p>
+    <p><strong>Verification.</strong> To protect you, we will verify your request by matching information you provide (such as the Apple-assigned identifier tied to your community contributions) with what we hold. We do not collect enough information to identify most users, and we will not create new personal information just to verify a request.</p>
+    <p><strong>Authorized agents.</strong> You may use an authorized agent to submit a request; we may require proof of authorization and verification of your identity.</p>
+    <p><strong>Response time.</strong> We will confirm receipt within 10 business days and respond substantively within 45 calendar days, extendable by another 45 days where permitted, and will explain any reason we cannot fully comply.</p>
+    <h3>Shine the Light</h3>
+    <p>California Civil Code § 1798.83 permits California residents to request information about disclosures of personal information to third parties for their direct-marketing purposes. <strong>We do not disclose personal information to third parties for their direct marketing.</strong></p>
+    <p><strong>Notice of financial incentive.</strong> We do not offer financial incentives or price/service differences in exchange for the retention or sale of personal information.</p>
+  </section>
+
+  <section id="other-us">
+    <h2>11. Other U.S. State Privacy Rights</h2>
+    <p>Residents of states with comprehensive privacy laws (including Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, and others) may have rights to access, delete, correct, and obtain a portable copy of personal information, and to opt out of targeted advertising, sale, or certain profiling. <strong>We do not engage in targeted advertising, sale of personal information, or profiling with legal or similarly significant effects</strong>, so those opt-outs do not apply. To exercise any available right, contact us using the details below; you may appeal a decision by replying to our response.</p>
+  </section>
+
+  <section id="gdpr">
+    <h2>12. GDPR / UK Rights &amp; International Users</h2>
+    <p>If you are in the EEA, UK, or Switzerland, you have rights to access, rectify, erase, restrict, port, and object to processing of your personal data, and to lodge a complaint with your supervisory authority. Our legal bases for the limited processing we perform are: <strong>your consent</strong> (publishing to the Community, Sign in with Apple, device permissions), <strong>performance of a contract</strong> (providing features you request), and our <strong>legitimate interests</strong> (keeping the community safe and free of abuse), balanced against your rights.</p>
+    <p><strong>International transfers.</strong> Community data is stored in Apple's global CloudKit infrastructure, which may process data in the United States and other countries. Apple maintains its own safeguards for such transfers. By publishing community content, you understand it may be processed internationally.</p>
+  </section>
+
+  <section id="children">
+    <h2>13. Children's Privacy</h2>
+    <p>Grocery Map is intended for a general audience and is not directed to children under 13, and we do not knowingly collect personal information from children under 13 (or under 16 for "sale"/"sharing," which we do not do). If you believe a child has provided personal information through the Community, contact us and we will delete it promptly.</p>
+  </section>
+
+  <section id="dnt">
+    <h2>14. Do Not Track &amp; Opt-Out Preference Signals</h2>
+    <p>Grocery Map is a native app with no web browsing, no cookies, and no cross-site tracking, so "Do Not Track" browser signals and Global Privacy Control signals do not apply to it. Regardless of any signal, we do not track you across apps or websites and do not sell or share your personal information.</p>
+  </section>
+
+  <section id="thirdparty">
+    <h2>15. Third-Party Services</h2>
+    <p>The only third party integral to the Service is <strong>Apple</strong>, which provides iCloud/CloudKit storage, Sign in with Apple, App Store subscription processing, Reminders, Photos, and Maps place data. Your use of those features is also governed by Apple's <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a> and applicable Apple terms. We integrate no advertising networks, no analytics SDKs, and no data brokers.</p>
+  </section>
+
+  <section id="changes">
+    <h2>16. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. If we make material changes, we will update the "Last updated" date above and, where appropriate, prompt you to review and re-accept the policy in the app. Your continued use of the Service after an update takes effect constitutes acceptance of the revised policy, to the extent permitted by law.</p>
+  </section>
+
+  <section id="contact">
+    <h2>17. Contact Us</h2>
+    <p>Questions, concerns, or privacy requests? Email us and we will respond as required by applicable law:</p>
+    <p><strong>Email:</strong> <a href="mailto:grocerymap.feedback@gmail.com">grocerymap.feedback@gmail.com</a><br />
+    <strong>Subject line for privacy requests:</strong> "California Privacy Request" (or your state / region)</p>
+    <p>If you have a disability and need this policy in an alternative accessible format, contact us and we will provide one.</p>
   </section>
 </main>
 
